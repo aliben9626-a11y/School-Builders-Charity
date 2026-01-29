@@ -1,0 +1,46 @@
+<section id="donate" class="py-5 bg-light">
+    <div class="container">
+        <h2>Make a Donation</h2>
+        <p>Choose an amount and payment method. Help us reach our goal of $100,000 for the next school.</p>
+        <form action="/donate" method="post"> <!-- Replace with real payment endpoint -->
+            <div class="mb-3">
+                <label for="amount" class="form-label">Donation Amount (PKR)</label>
+                <input type="number" class="form-control" id="amount" min="1" required>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Method</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="bank" value="bank" required>
+                    <label class="form-check-label" for="bank">
+                        Bank of Pakistan (Direct Transfer)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="easypaisa" value="easypaisa">
+                    <label class="form-check-label" for="easypaisa">
+                        Easypaisa
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="jazzcash" value="jazzcash">
+                    <label class="form-check-label" for="jazzcash">
+                        JazzCash
+                    </label>
+                </div>
+            </div>
+            <div id="payment-details" class="mb-3" style="display: none;">
+                <p id="details-text"></p>
+            </div>
+            <button type="submit" class="donate-btn">Submit Donation</button>
+        </form>
+        <p class="mt-3">Payments are secure and processed locally. For international donors, consider PayPal (add as an option).</p>
+    </div>
+</section>
